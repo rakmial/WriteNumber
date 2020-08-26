@@ -2,8 +2,10 @@ require('rspec')
 require('WriteNumber')
 
 
-expect(WriteNumber) do
-  
+describe(WriteNumber) do
+  it('takes 1 Integer input that may be read with .num method') do
+    expect(WriteNumber.new(1).num).to(eq(1))
+  end
 end
 
 ### English Specification
