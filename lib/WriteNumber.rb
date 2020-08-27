@@ -13,6 +13,10 @@ class WriteNumber
       13 => "thirteen", 14 => "fourteen", 15 => "fifteen", 16 => "sixteen",
       17 => "seventeen", 18 => "eighteen", 19 => "nineteen"
     }
+    @tens = {
+      20 => "twenty", 30 => "thirty", 40 => "forty", 50 => "fifty",
+      60 => "sixty", 70 => "seventy", 80 => "eighty", 90 => "ninety"
+    }
   end
   def written
     "zero" if @num == 0
@@ -25,5 +29,8 @@ class WriteNumber
   end
   def teens
     @teens
+  end
+  def tens
+    @tens
   end
 end
