@@ -28,8 +28,8 @@ describe(WriteNumber) do
   it('contains Hash instance var @tens that takes Integers[10, 20, ..., 90] \
     as keys and their written Strings as values. .tens reader method provided.') do
       expect(WriteNumber.new(0).tens).to(eq({
-        20 => "twenty", 30 => "thirty", 40 => "forty", 50 => "fifty",
-        60 => "sixty", 70 => "seventy", 80 => "eighty", 90 => "ninety"
+        2 => "twenty", 3 => "thirty", 4 => "forty", 5 => "fifty",
+        6 => "sixty", 7 => "seventy", 8 => "eighty", 9 => "ninety"
       }))
   end
   it('contains Hash instance var @hundreds with written English word values \
@@ -47,5 +47,11 @@ describe(WriteNumber) do
       expect(WriteNumber.new(0).mag_map).to(eq({
         3 => "thousand", 6 => "million", 9 => "billion", 12 => "trillion"
       }))
-    end
+  end
+  it('provides the .written method, which takes input Integer <= 1000000000000 \
+     (1 trillion) and returns the English String for this number.') do
+       expect(WriteNumber.new(84254548516).written).to(eq('eight hundred forty two \
+        billion five hundred forty five million four hundred eighty five \
+        thousand five hundred sixteen'))
+     end
 end

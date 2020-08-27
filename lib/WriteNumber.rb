@@ -14,18 +14,49 @@ class WriteNumber
       17 => "seventeen", 18 => "eighteen", 19 => "nineteen"
     }
     @tens = {
-      20 => "twenty", 30 => "thirty", 40 => "forty", 50 => "fifty",
-      60 => "sixty", 70 => "seventy", 80 => "eighty", 90 => "ninety"
+      2 => "twenty", 3 => "thirty", 4 => "forty", 5 => "fifty",
+      6 => "sixty", 7 => "seventy", 8 => "eighty", 9 => "ninety"
     }
     @hundreds = {
       1 => "one hundred", 2 => "two hundred", 3 => "three hundred",
       4 => "four hundred", 5 => "five hundred", 6 => "six hundred",
       7 => "seven hundred", 8 => "eight hundred", 9 => "nine hundred"
     }
+    @mag_map = {
+      3 => "thousand", 6 => "million", 9 => "billion", 12 => "trillion"
+    }
 
   end
   def written
-    "zero" if @num == 0
+    if @num == 0
+      "zero"
+    else
+      ix = 0
+      last_one = 0
+      flip = num.to_s.reverse.split("").map {|char| char.to_i}
+      flip.each do |digit|
+        if ix % 3 == 0
+          last_one = digit
+          if ix / 3 > 0
+            @written.shift(@mag_map.fetch(ix))
+          end
+        end
+        if ix % 3 == 1
+          if digit != 1
+            @written.shift(@uniqs.fetch(last_one))
+            @written.shift(@tens.fetch(digit))
+          else 
+            binding.pry
+            @written.shift(@uniqs.fetch(digit))
+          end
+        end
+        if ix % 3 == 2
+          @written.shift(@hundreds.fetch(digit))
+        end
+        ix += 1
+      end
+      @written.join.to_i
+    end
   end
   def num
     @num
@@ -41,5 +72,8 @@ class WriteNumber
   end
   def hundreds
     @hundreds
+  end
+  def mag_map
+    @mag_map
   end
 end

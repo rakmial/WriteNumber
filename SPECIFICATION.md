@@ -15,10 +15,15 @@ From simple to complex (kinda, not really - the lower the number, the more speci
 
 5. WriteNumber initializes with a Hash instance variable @tens with written English word values corresponding to num Integer keys [20, 30, ..., 90] (the consistent tens) .tens method provided to show key-value Hash object.
 
- WriteNumber initializes with a Hash instance variable @hundreds with written English word values corresponding to num Integer keys [1-9]. .hundreds method provided to show key-value Hash object.
+ 6. WriteNumber initializes with a Hash instance variable @hundreds with written English word values corresponding to num Integer keys [1-9]. .hundreds method provided to show key-value Hash object.
 
-# WriteNumber initializes Hash instance variable @mag_map = 
-#  {3 => "thousand", 6 => "million", ..., 12 => "trillion"}. .written method
+7. WriteNumber initializes Hash instance variable @mag_map = {
+  3 => "thousand", 6 => "million", 9 => "billion", 12 => "trillion"
+  }.
+.mag_map is provided to show key-value Hash object.
+
+
+# .written method
 #  returns @written if @written (for zero), then ...
 #  Method vars ix and last_one are assigned 0. 
 #  num.to_s.reverse!.each do |digit|
@@ -32,7 +37,7 @@ From simple to complex (kinda, not really - the lower the number, the more speci
 #     else
 #      @written.shift(@uniqs.fetch(digit))
 #    if ix % 3 == 2
-#     @written.shift(@hundreds.fetch(digit) + " hundred")
+#     @written.shift(@hundreds.fetch(digit)
 #    
 #    ix += 1
 #  num.reverse!.join!.to_i
