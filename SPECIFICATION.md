@@ -15,10 +15,7 @@ From simple to complex (kinda, not really - the lower the number, the more speci
 
 5. WriteNumber initializes with a Hash instance variable @tens with written English word values corresponding to num Integer keys [20, 30, ..., 90] (the consistent tens) .tens method provided to show key-value Hash object.
 
-# WriteNumber initializes with a Hash instance variable @hundreds that is a 
-#  subset of @uniqs, accepting keys [1-9] to return their written values.
-#  .hundreds method accepts keys from [100, 200, ..., 900], divides by 100
-#  then returns written value concatenated with " hundred".
+ WriteNumber initializes with a Hash instance variable @hundreds with written English word values corresponding to num Integer keys [1-9]. .hundreds method provided to show key-value Hash object.
 
 # WriteNumber initializes Hash instance variable @mag_map = 
 #  {3 => "thousand", 6 => "million", ..., 12 => "trillion"}. .written method

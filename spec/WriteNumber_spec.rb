@@ -32,15 +32,20 @@ describe(WriteNumber) do
         60 => "sixty", 70 => "seventy", 80 => "eighty", 90 => "ninety"
       }))
   end
-  it('contains Hash instance var @hundreds that is a subset of @uniqs for keys \
-    Integers[1-9], returning the same written Strings as values concatenated \
-    with " hundred". .hundreds reader method provided.') do
+  it('contains Hash instance var @hundreds with written English word values \
+    corresponding to num Integer keys [1-9]. .hundreds method provided to show \
+    key-value Hash object.') do
       expect(WriteNumber.new(0).hundreds).to(eq({
         1 => "one hundred", 2 => "two hundred", 3 => "three hundred",
         4 => "four hundred", 5 => "five hundred", 6 => "six hundred",
         7 => "seven hundred", 8 => "eight hundred", 9 => "nine hundred"
       }))
+  end
+  it('contains Hash instance var @mag_map with written English word values \
+    ["thousand", "million", "billion", "trillion"] corresponding to num Integer \
+    keys [3, 6, 9, 12]. .mag_map method provided to show key-value Hash object.') do
+      expect(WriteNumber.new(0).mag_map).to(eq({
+        3 => "thousand", 6 => "million", 9 => "billion", 12 => "trillion"
+      }))
     end
-
 end
-
