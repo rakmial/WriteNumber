@@ -8,7 +8,7 @@ class WriteNumber
   def num
     @num
   end
-  #def written
-  #  "zero" if @num == 0
-  #end
+  def written
+    "zero" if @num == 0
+  end
 end
