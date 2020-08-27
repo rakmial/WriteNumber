@@ -2,7 +2,8 @@
 _Requirements_: Write a method that translates numbers in numeric (ie Integer)
 form into written English words. 
 
-_Tests & Functions_: From simple to complex (kinda, not really - the lower the number, the more special cases, DANKE DEUTSCH, but we can expand to higher values more easily.)
+###_Tests & Functions_ 
+From simple to complex (kinda, not really - the lower the number, the more special cases, DANKE DEUTSCH, but we can expand to higher values more easily.)
 
 1. WriteNumber initializes an instance with 1 input, an Integer, which it binds to instance variable @num that returns with .num method.
 
