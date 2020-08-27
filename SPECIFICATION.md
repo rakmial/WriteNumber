@@ -11,12 +11,9 @@ From simple to complex (kinda, not really - the lower the number, the more speci
 
 3. WriteNumber initializes with a Hash instance variable @uniqs with written English word values corresponding to num Integer keys [0-12] (the weirdos). .uniqs reader method provided to show key-value Hash object.
 
- 4. WriteNumber initializes with a Hash instance variable @teens with written English word values corresponding to num Integer keys [13-19] (the teens) .teens reader method provided to show key-value Hash object.
+4. WriteNumber initializes with a Hash instance variable @teens with writtenEnglish word values corresponding to num Integer keys [13-19] (the teens) .teensreader method provided to show key-value Hash object.
 
-# WriteNumber initializes with a Hash instance variable @tens with written
-#  English word values corresponding to num Integer keys [20, 30, ..., 90]
-#  (the consistent tens).tens(key) method accepts numbers from [20, 30 ..., 90]
-#  and returns the written value.
+5. WriteNumber initializes with a Hash instance variable @tens with written English word values corresponding to num Integer keys [20, 30, ..., 90] (the consistent tens) .tens method provided to show key-value Hash object.
 
 # WriteNumber initializes with a Hash instance variable @hundreds that is a 
 #  subset of @uniqs, accepting keys [1-9] to return their written values.

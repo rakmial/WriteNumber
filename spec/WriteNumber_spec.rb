@@ -31,6 +31,15 @@ describe(WriteNumber) do
         20 => "twenty", 30 => "thirty", 40 => "forty", 50 => "fifty",
         60 => "sixty", 70 => "seventy", 80 => "eighty", 90 => "ninety"
       }))
+  end
+  it('contains Hash instance var @hundreds that is a subset of @uniqs for keys \
+    Integers[1-9], returning the same written Strings as values concatenated \
+    with " hundred". .hundreds reader method provided.') do
+      expect(WriteNumber.new(0).hundreds).to(eq({
+        1 => "one hundred", 2 => "two hundred", 3 => "three hundred",
+        4 => "four hundred", 5 => "five hundred", 6 => "six hundred",
+        7 => "seven hundred", 8 => "eight hundred", 9 => "nine hundred"
+      }))
     end
 
 end
