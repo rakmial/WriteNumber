@@ -9,13 +9,9 @@ From simple to complex (kinda, not really - the lower the number, the more speci
 
 2. WriteNumber initializes an instance variable @written as [], then checks if @num is "0". If true, @written = "zero". .written method returns "zero" for "0".
 
-# WriteNumber initializes with a Hash instance variable @uniqs with written
-#  English word values corresponding to num Integer keys [0-12] (the weirdos).
-#  .uniqs(Integer[0-12]) method accepts key to return written value, "" for 0.
+3. WriteNumber initializes with a Hash instance variable @uniqs with written English word values corresponding to num Integer keys [0-12] (the weirdos). .uniqs reader method provided to show key-value Hash object.
 
-# WriteNumber initializes with a Hash instance variable @teens with written
-#  English word values corresponding to num Integer keys [13-19] (the teens)
-#  .teens(Integer[13-19]) method accepts key to return written value.
+ 4. WriteNumber initializes with a Hash instance variable @teens with written English word values corresponding to num Integer keys [13-19] (the teens) .teens reader method provided to show key-value Hash object.
 
 # WriteNumber initializes with a Hash instance variable @tens with written
 #  English word values corresponding to num Integer keys [20, 30, ..., 90]

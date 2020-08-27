@@ -24,6 +24,13 @@ describe(WriteNumber) do
         13 => "thirteen", 14 => "fourteen", 15 => "fifteen", 16 => "sixteen",
         17 => "seventeen", 18 => "eighteen", 19 => "nineteen"
       }))
+  end
+  it('contains Hash instance var @tens that takes Integers[10, 20, ..., 90] \
+    as keys and their written Strings as values. .tens reader method provided.') do
+      expect(WriteNumber.new(0).tens).to(eq({
+        20 => "twenty", 30 => "thirty", 40 => "forty", 50 => "fifty",
+        60 => "sixty", 70 => "seventy", 80 => "eighty", 90 => "ninety"
+      }))
     end
 
 end
