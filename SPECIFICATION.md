@@ -1,16 +1,12 @@
-### English Specification
-### Requirements: Write a method that translates numbers in numeric (ie Integer)
-### form into written English words. 
-### From simple to complex (kinda, not really - the lower the number, the more
-### special cases, DANKE DEUTSCH, but we can expand to higher values more easily.)
+# English Specification
+_Requirements_: Write a method that translates numbers in numeric (ie Integer)
+form into written English words. 
 
+_Tests & Functions_: From simple to complex (kinda, not really - the lower the number, the more special cases, DANKE DEUTSCH, but we can expand to higher values more easily.)
 
-# WriteNumber initializes an instance with 1 input, an Integer, which it binds
-#   to instance variable @num that returns with .num method.
+1. WriteNumber initializes an instance with 1 input, an Integer, which it binds to instance variable @num that returns with .num method.
 
-# WriteNumber initializes an instance variable @written as [], then checks if 
-#  @num is "0". If true, @written = "zero". .written method returns "zero" for
-#  "0".
+2. WriteNumber initializes an instance variable @written as [], then checks if @num is "0". If true, @written = "zero". .written method returns "zero" for "0".
 
 # WriteNumber initializes with a Hash instance variable @uniqs with written
 #  English word values corresponding to num Integer keys [0-12] (the weirdos).
